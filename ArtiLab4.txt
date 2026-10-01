@@ -40,6 +40,18 @@ A = B, B = f.
 49 ?- A = B, B = f, A = e.
 false.
 
+Explanations:
+40. The two atoms are identical, so Prolog successfully unifies them.
+41. The atoms `house` and `abc` have different names, so they cannot unify.
+42. Both structures match. Prolog assigns `a` to `C`, while the second arguments are already identical.
+43. Prolog matches the corresponding arguments by assigning `a` to `C` and `d` to `B`.
+44. Reversing the order does not affect unification. The variables receive the same values: `C = a` and `B = d`.
+45. Prolog assigns `a` to `A` and the complete compound term `f(g,h)` to `B`.
+46. Unification fails because `A` would need to represent both `b` and `c`, which are different atoms.
+47. Both arguments match when `A` is assigned `b`, so unification succeeds.
+48. The variables `A` and `B` are unified first. Assigning `f` to `B` also gives `A` the same value.
+49. The query fails because `A` is already unified with `f` and cannot also unify with the different atom `e`.
+
 Task 2: 
 
 50 ?- consult(['c:/Users/sonbu/OneDrive/سطح المكتب/Lab04_family_facts.pl']).
