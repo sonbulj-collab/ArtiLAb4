@@ -1,0 +1,67 @@
+Welcome to SWI-Prolog (threaded, 64 bits, version 10.0.2)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+Task 1:
+
+40 ?- house = house.
+true.
+
+41 ?- house = abc.
+false.
+
+42 ?- edge(a,b) = edge(C,b).
+C = a.
+
+43 ?- edge(a,d) = edge(C,B).
+C = a,
+B = d.
+
+44 ?- edge(C,B) = edge(a,d).
+C = a,
+B = d.
+
+45 ?- edge(A,f(g,h)) = edge(a,B).
+A = a,
+B = f(g, h).
+
+46 ?- edge(A,A) = edge(b,c).
+false.
+
+47 ?- edge(A,A) = edge(b,b).
+A = b.
+
+48 ?- A = B, B = f.
+A = B, B = f.
+
+49 ?- A = B, B = f, A = e.
+false.
+
+Task 2: 
+
+50 ?- consult(['c:/Users/sonbu/OneDrive/سطح المكتب/Lab04_family_facts.pl']).
+true.
+
+51 ?- female(X).
+X = sara .
+
+52 ?- male(_).
+true .
+
+53 ?- parent(GP,P), parent(P,faisal).
+GP = ali,
+P = muhammad .
+
+54 ?- parent(ahmad,D), female(D).
+D = sara .
+
+55 ?- parent(P,ahmad), parent(P,muhammad).
+P = ali.
+
+56 ?- parent(P,khan), parent(P,nora), male(khan), khan \= nora.
+P = ahmad.
+
+57 ?- 
